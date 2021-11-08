@@ -1,0 +1,3 @@
+SELECT accounts.username, COUNT(*)FROM accounts LEFT JOIN account_group ON accounts.acc_id = account_group.acc_id GROUP BY accounts.username;
+SELECT EXTRACT(YEAR FROM creation_date), COUNT(EXTRACT(YEAR FROM creation_date))FROM groups GROUP BY EXTRACT(YEAR FROM creation_date) ORDER BY EXTRACT(YEAR FROM creation_date) ASC;
+SELECT group_name, number_of_subscribers FROM groups ORDER BY number_of_subscribers DESC
